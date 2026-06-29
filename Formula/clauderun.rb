@@ -5,14 +5,11 @@ class Clauderun < Formula
   sha256 "fdf24e06a45c46559a83fe74b1fb05e3289fcefba562357113d98d75c85a7394"
   license "MIT"
 
-  depends_on "python@3.13"
-
   def install
     libexec.install "clauderun"
-    python = Formula["python@3.13"].opt_bin/"python3"
     (bin/"clauderun").write <<~SH
       #!/bin/sh
-      exec env PYTHONPATH="#{libexec}" "#{python}" -m clauderun "$@"
+      exec env PYTHONPATH="#{libexec}" python3 -m clauderun "$@"
     SH
   end
 
