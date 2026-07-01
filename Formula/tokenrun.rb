@@ -1,8 +1,13 @@
+# Homebrew formula for token-runner (the `tokenrun` command).
+#
+# The live formula lives in the emirsafian/homebrew-tap repo. To cut a release:
+# tag it, get the tarball sha256, fill the version + sha below, and copy this
+# file into the tap as Formula/tokenrun.rb. (release.sh automates version + sha.)
 class Tokenrun < Formula
   desc "Terminal speedometer and pixel runner game for your AI coding token usage"
   homepage "https://github.com/emirsafian/token-runner"
-  url "https://github.com/emirsafian/token-runner/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d318a784fe5203ffc651f429c5d98a6339c7a3a19c06f19e304e5530b8d689a1"
+  url "https://github.com/emirsafian/token-runner/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "642c5c4d14154a8c9b45b048d7001d54680d1b899e8a56001add9a75b77861a4"
   license "MIT"
 
   def install
